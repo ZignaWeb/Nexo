@@ -54,10 +54,41 @@ $cpa = array (
 
 $secciones=array(
 	
-		/*Rubros*/
-	"Rubros" => array (
-		"db" => "ag_rubros",
-		"t" => "Rubros",
+		/*Noticias*/
+	"noticias" => array (
+		"db" => "ag_noticias",
+		"t" => "Noticias",
+		"l" => 0,
+		"p" => 1,
+		"a" => array (
+			"listar" => array ( "db" => "listar", "menu" => "menu", "t" 			=>$inline[$lang]["listar"], "p" => 1),
+			"editar" => array ( "db" => "editar", "menu" => "context", "t" 	 =>$inline[$lang]["editar"], "p" => 1),
+			"delete" => array ( "db" => "delete", "menu" => "context", "t" 	 =>$inline[$lang]["delete"], "p" => 1),
+			"cargar" => array ( "db" => "cargar", "menu" => "menu", "t" 			=>$inline[$lang]["cargar"], "p" => 1),
+			"export" => array ( "db" => "export", "menu" => "menu", "t"	  	=>$inline[$lang]["export"], "p" => 99),
+			"medias" => array ( "db" => "medias", "menu" => "context", "t" 	 =>$inline[$lang]["medias"], "p" => 1)
+		),
+		"c" => array (
+			"titular" => array( "db" => "titular", "t" => "Titular", "type" => "input", "val" => "varchar", "force" => SI, "search" => searchable),
+			"texto" => array ("db" => "texto", "t" => "Texto", "type" => "textarea", "val" => "text", "force" => SI, "search" => nosearchable),
+			"mostrar" => array ( "db" => "mostrar", "t" => $inline[$lang]["visibility"], "val" => "number", "type" => "select", 
+					"options" => array (1 => $inline[$lang]["Show"], 0 => $inline[$lang]["NoShow"])
+					),
+			"creado" => array ("db" => "creado", "t" => $inline[$lang]["created"], "type" => "input", "val" => "date", "force" => SI, "search" => 1,  "autofill" =>$hoy),
+			"img" => array ( "db" => "imagen", "t" => $inline[$lang]["File"], "type" => "img", "dependency" =>"med", "val" => "file", "search" => 0,"hide" => 2,"force" => 1,
+					"imgsizes" => array (
+						"thumb" => array ( "w" => 500, "h" => "auto"),
+						"box" => array ( "w" => 800, "h" => "auto"),
+					)
+				)
+		)
+	),
+
+	
+	/*Programas*/
+	"programas" => array (
+		"db" => "ag_programas",
+		"t" => "Programas",
 		"l" => 0,
 		"p" => 1,
 		"a" => array (
@@ -69,25 +100,28 @@ $secciones=array(
 			"medias" => array ( "db" => "medias", "menu" => "context", "t" =>$inline[$lang]["medias"], "p" => 1)
 		),
 		"c" => array (
-			"nombre" => array( "db" => "nombre", "t" => "Nombre del Rubro", "type" => "input", "val" => "varchar", "force" => 1, "search" => searchable),
-			"desc" => array ("db" => "desc", "t" => $inline[$lang]["desc"], "type" => "textarea", "val" => "text", "force" => NO, "search" => nosearchable),
+			"nombre" => array( "db" => "nombre", "t" => "Nombre del programa", "type" => "input", "val" => "varchar", "force" => SI, "search" => searchable),
+			"desc" => array ("db" => "desc", "t" => $inline[$lang]["desc"], "type" => "textarea", "val" => "text", "force" => SI, "search" => searchable),
+			"dias" => array("db"	=> "dias","t" => "Dias","val"=> "text","type"=> "check",
+					"options" => array(1 => "Lunes",2 => "Martes",3 => "Miercoles",4 => "Jueves",5 => "Viernes",6 => "Sabado",7 => "Domingo")),
+			"horario" => array ("db" => "horario", "t" => "horario", "type" => "input", "val" => "text", "force" => SI, "search" => 1),
+			"creado" => array ("db" => "creado", "t" => $inline[$lang]["created"], "type" => "input", "val" => "date", "force" => SI, "search" => 1,  "autofill" =>$hoy),
 			"mostrar" => array ( "db" => "mostrar", "t" => $inline[$lang]["visibility"], "val" => "number", "type" => "select", 
 					"options" => array (1 => $inline[$lang]["Show"], 0 => $inline[$lang]["NoShow"])
 					),
-			
-			"img" => array ( "db" => "imagen", "t" => $inline[$lang]["File"], "type" => "img", "dependency" =>"med", "val" => "file", "search" => 0,"hide" => 2,"force" => 1,
+			"img" => array ( "db" => "imagen", "t" => $inline[$lang]["File"], "type" => "img", "dependency" =>"med", "val" => "file", "search" => 0,"hide" => 2,
 					"imgsizes" => array (
-						"thumb" => array ( "w" => 500, "h" => 500),
+						"thumb" => array ( "w" => 500, "h" => "auto"),
+						"box" => array ( "w" => 800, "h" => "auto"),
 					)
 				)
 		)
 	),
-
 	
-	/*Productos*/
-	"productos" => array (
-		"db" => "ag_productos",
-		"t" => "Productos",
+		/*publiciadad*/
+	"publicidad" => array (
+		"db" => "ag_publicidad",
+		"t" => "Publicidad",
 		"l" => 0,
 		"p" => 1,
 		"a" => array (
@@ -100,20 +134,18 @@ $secciones=array(
 		),
 		"c" => array (
 			"nombre" => array( "db" => "nombre", "t" => "Nombre", "type" => "input", "val" => "varchar", "force" => SI, "search" => searchable),
+			"desc" => array ("db" => "desc", "t" => $inline[$lang]["desc"], "type" => "textarea", "val" => "text", "force" => NO, "search" => searchable),
 			"creado" => array ("db" => "creado", "t" => $inline[$lang]["created"], "type" => "input", "val" => "date", "force" => SI, "search" => 1,  "autofill" =>$hoy),
-			"desc" => array ("db" => "desc", "t" => $inline[$lang]["desc"], "type" => "textarea", "val" => "text", "force" => SI, "search" => searchable),
-			"rubroid" => array ("db" => "rubroid", "t" => "Rubro", "type" => "drop", "val" => "number", "force" => SI, "search" => 0, "get" => "Rubros"),
 			"mostrar" => array ( "db" => "mostrar", "t" => $inline[$lang]["visibility"], "val" => "number", "type" => "select", 
 					"options" => array (1 => $inline[$lang]["Show"], 0 => $inline[$lang]["NoShow"])
 					),
 			"img" => array ( "db" => "imagen", "t" => $inline[$lang]["File"], "type" => "img", "dependency" =>"med", "val" => "file", "search" => 0,"hide" => 2,
 					"imgsizes" => array (
-						"thumb" => array ( "w" => 500, "h" => 500),
+						"thumb" => array ( "w" => 500, "h" => "auto"),
 					)
 				)
 		)
 	),
-	
 
 	
 	

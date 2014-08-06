@@ -317,12 +317,29 @@ function fFecha ($fecha) {
 	$date = date_create($fecha);
 	return date_format($date, 'd/m/ Y');//F j, Y
 }
+function query($tquery){
+	$query=mysql_query($tquery);
+	$array=mysql_fetch_assoc($query);
+	foreach($array as $val){
+		$datos=$val;
+		}
+		return($datos);
+	
+}
+function debug_to_console( $data ){
 
-function debug_to_console( $data ) {
-
-    if ( is_array( $data ) )
-        $output = "<script>console.log( 'Debug Objects: " . implode( ',', $data) . "' );</script>";
-    else
+    if ( is_array( $data ) ){
+    	$var=implode( ',', $data);
+    while ( $i <= 10) {
+     	 if ( is_array( $var ) ){$output = "<script>console.log( 'Debug Objects: " .implode( ',', $var) . "' );</script>";}
+     	 $output = "<script>console.log( 'Debug Objects: " .$var . "' );</script>";
+     $i++;
+     } 
+    	
+   
+    
+       
+    }else
         $output = "<script>console.log( 'Debug Objects: " . $data . "' );</script>";
 
     echo $output;

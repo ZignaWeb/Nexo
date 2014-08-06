@@ -76,12 +76,26 @@
 		$q="INSERT INTO `".$secciones[$_GET["q"]]["db"]."` SET ";
 		$e="";
 		$i=0;
+		$f=0;
 		$imgs=array();
 		$size=array();
 		foreach ($secciones[$_GET["q"]]["c"] as $val) {
-			$i++;
+				$i++;
 			if ($val["val"]!="date") {
-				$postv = $_POST[$val["db"]];
+				if($val["type"]=="check"){
+					$posts = $_POST[$val["db"]];
+					for($j=0; $j < count($posts); $j++){
+							/**
+							*TODO
+							*agregar una coma o algun caracter para el explode
+							*cambiar de la arq a tipo text DONE
+							*borrar y reinstalar la tabla DONE
+							**/
+							if($f==0){$postv .=$posts[$j];$f++;}
+							else{$postv .=','.$posts[$j];}
+						}
+					}else
+					$postv = $_POST[$val["db"]];
 			}else{
 				$postv = date('Y-n-j H:i:s', strtotime(str_replace('-', '/', $_POST[$val["db"]])));
 			}

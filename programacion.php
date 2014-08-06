@@ -34,7 +34,22 @@
   </header>
   <div class="row ">
     <article class="small-9  column fondoBlanco ">
-  
+    
+  		<div class="block1"> 
+    <div class="folio4"> 
+     <img src="images/4.jpg"/>
+     <div class="face"> 
+       <h2>Pasalo a Rock</h2>
+       <h2 class="hs">Lun Mie y Vie </h2>
+       <h2 class="hs">De 20 a 22hs </h2>
+       
+         <a href="#" class="icon"><img src="images/chrome.png" /></a>
+         <a href="#" class="icon2"><img src="images/firefox.png" /></a>
+     </div> 
+     </div>
+        <p class="subtitle"><b>Brief snippet</b> or subtitle can go here.. </p>
+     </div>
+     
     </article>
    
     <aside class="small-3  column right fondoBlanco ">
@@ -72,6 +87,27 @@
   <footer>
   	
   </footer>
-
+ <script type="text/javascript" src="r/js/jquery.js"></script>
+    <script type="text/javascript">
+			$(function() {
+					$('#accordion > li').hover(
+							function () {
+								
+									var $this = $(this);
+									$this.stop().animate({'width':'380px'},500);
+									$('.heading',$this).stop(true,true).fadeOut();
+									$('.bgDescription',$this).stop(true,true).slideDown(500);
+									$('.description',$this).stop(true,true).fadeIn();
+							},
+							function () {
+									var $this = $(this);
+									$this.stop().animate({'width':'95px'},1000);
+									$('.heading',$this).stop(true,true).fadeIn();
+									$('.description',$this).stop(true,true).fadeOut(500);
+									$('.bgDescription',$this).stop(true,true).slideUp(700);
+							}
+					);
+			});
+ </script>
 </body>
 </html>
