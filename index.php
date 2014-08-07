@@ -13,6 +13,7 @@
   <header >
   	<div class="small-12  ">
     	<a href="index.php"><img alt="NEXO FM" src="r/img/LOGO.png" /></a>
+            <p class="fecha right">20/20/20</p>
     </div>
 
     <div class="row ">
@@ -36,16 +37,22 @@
   <div class="row ">
     <article class="small-9  column  noticias ">
     	
-      <div class="small-n column fondoBlanco ">
+      <div class="small-nI column fondoBlanco ">
           
             <div class="small-10 push-1">
-            <img src="http://placehold.it/350x150">
+            	<img src="http://placehold.it/350x150" class="small-12">
+              <div class="caption small-12">
+              	<h1>Titular descriptivo de la noticia  a mostrar 1</h1>
+              </div>
+             
+              
             </div>
-            <h1 class="small-10 push-1 column">Titular descriptivo de la noticia  a mostrar 1</h1>
+             <p class="small-10 push-1 column">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin blandit, elit eu tristique malesuada, dolor libero viverra diam, id feugiat mi lorem accumsan felis. Ut elit elit, elementum in vulputate ac, malesuada ac velit. Nam eros dolor, ullamcorper ac dignissim nec, egestas a nisl. Praesent quam lacus, ornare nec dui in, pretium porta massa. Pellentesque aliquam magna non justo gravida lobortis. Morbi aliquet mauris vitae sem sollicitudin, eu tempus risus ultricies. Pellentesque interdum est sapien, a gravida lorem congue non. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In hac habitasse platea dictumst. Donec ut purus ante. Sed id eleifend nisi, ac mollis tellus.</p>
+            
           
       </div>
       
-       <div class="small-nI	 column fondoBlanco ">
+       <div class="small-n	 column fondoBlanco ">
           
             <div class="small-10 push-1">
             <img src="http://placehold.it/350x150">

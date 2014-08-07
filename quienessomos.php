@@ -15,6 +15,7 @@
   <header >
   	<div class="small-12  ">
     	<a href="index.php"><img alt="NEXO FM" src="r/img/LOGO.png" /></a>
+            <h3 class="fecha right"></h3>
     </div>
 
     <div class="row ">
@@ -87,7 +88,9 @@
   </footer>
   <script src="r/js/jquery.js"></script>
 <script src="r/js/foundation.min.js"></script>
+
 <script>
+
 	$(document).foundation('orbit', {
 			bullets:false,
 			navigation_arrows:true,
@@ -98,6 +101,16 @@
 		setTimeout(function(){
    	$(window).trigger('resize');        
 	}, 0);
+</script>
+<script >
+$(document).ready(function() {
+var meses = new Array ("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre");
+var diasSemana = new Array("Domingo","Lunes","Martes","Miércoles","Jueves","Viernes","Sábado");
+var f=new Date();
+$(".fecha").html((diasSemana[f.getDay()] + ", " + f.getDate() + " de " + meses[f.getMonth()] + " de " + f.getFullYear()));
+
+
+});
 </script>
 
 </body>

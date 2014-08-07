@@ -12,6 +12,7 @@
   <header >
   	<div class="small-12  ">
     	<a href="index.php"><img alt="NEXO FM" src="r/img/LOGO.png" /></a>
+      <p class="fecha right">20/20/20</p>
     </div>
 
     <div class="row ">
@@ -34,21 +35,85 @@
   </header>
   <div class="row ">
     <article class="small-9  column fondoBlanco ">
-    
-  		<div class="block1"> 
+<div class="small-6 left ">    
     <div class="folio4"> 
-     <img src="images/4.jpg"/>
-     <div class="face"> 
-       <h2>Pasalo a Rock</h2>
-       <h2 class="hs">Lun Mie y Vie </h2>
-       <h2 class="hs">De 20 a 22hs </h2>
-       
-         <a href="#" class="icon"><img src="images/chrome.png" /></a>
-         <a href="#" class="icon2"><img src="images/firefox.png" /></a>
-     </div> 
-     </div>
-        <p class="subtitle"><b>Brief snippet</b> or subtitle can go here.. </p>
-     </div>
+      <img src="r/img/4.jpg"/>
+        <div class="face"> 
+          <h2>Pasalo a Rock</h2>
+          <h2 class="hs">Lun Mie y Vie </h2>
+          <h2 class="hs">De 20 a 22hs </h2>
+          <a href="#" class="icon"><img src="r/img/facebook.png" /></a>
+          <a href="#" class="icon2"><img src="r/img/twitter.png" /></a>
+        </div> 
+    </div>
+</div>
+     
+<div class="small-6 left ">    
+  <div class="block1"> 
+    <div class="folio4"> 
+      <img src="r/img/4.jpg"/>
+        <div class="face"> 
+          <h2>Pasalo a Rock</h2>
+          <h2 class="hs">Lun Mie y Vie </h2>
+          <h2 class="hs">De 20 a 22hs </h2>
+          <a href="#" class="icon"><img src="r/img/facebook.png" /></a>
+          <a href="#" class="icon2"><img src="r/img/twitter.png" /></a>
+        </div> 
+    </div>
+  </div>
+</div><div class="small-6 left">    
+  <div class="block1"> 
+    <div class="folio4"> 
+      <img src="r/img/4.jpg"/>
+        <div class="face"> 
+          <h2>Pasalo a Rock</h2>
+          <h2 class="hs">Lun Mie y Vie </h2>
+          <h2 class="hs">De 20 a 22hs </h2>
+          <a href="#" class="icon"><img src="r/img/facebook.png" /></a>
+          <a href="#" class="icon2"><img src="r/img/twitter.png" /></a>
+        </div> 
+    </div>
+  </div>
+</div><div class="small-6 left ">    
+  <div class="block1"> 
+    <div class="folio4"> 
+      <img src="r/img/4.jpg"/>
+        <div class="face"> 
+          <h2>Pasalo a Rock</h2>
+          <h2 class="hs">Lun Mie y Vie </h2>
+          <h2 class="hs">De 20 a 22hs </h2>
+          <a href="#" class="icon"><img src="r/img/facebook.png" /></a>
+          <a href="#" class="icon2"><img src="r/img/twitter.png" /></a>
+        </div> 
+    </div>
+  </div>
+</div><div class="small-6 left">    
+  <div class="block1"> 
+    <div class="folio4"> 
+      <img src="r/img/4.jpg"/>
+        <div class="face"> 
+          <h2>Pasalo a Rock</h2>
+          <h2 class="hs">Lun Mie y Vie </h2>
+          <h2 class="hs">De 20 a 22hs </h2>
+          <a href="#" class="icon"><img src="r/img/facebook.png" /></a>
+          <a href="#" class="icon2"><img src="r/img/twitter.png" /></a>
+        </div> 
+    </div>
+  </div>
+</div><div class="small-6 left">    
+  <div class="block1"> 
+    <div class="folio4"> 
+      <img src="r/img/4.jpg"/>
+        <div class="face"> 
+          <h2>Pasalo a Rock</h2>
+          <h2 class="hs">Lun Mie y Vie </h2>
+          <h2 class="hs">De 20 a 22hs </h2>
+          <a href="#" class="icon"><img src="r/img/facebook.png" /></a>
+          <a href="#" class="icon2"><img src="r/img/twitter.png" /></a>
+        </div> 
+    </div>
+  </div>
+</div>
      
     </article>
    

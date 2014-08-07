@@ -13,6 +13,7 @@
   <header >
   	<div class="small-12  ">
     	<a href="index.php"><img alt="NEXO FM" src="r/img/LOGO.png" /></a>
+            <p class="fecha right">20/20/20</p>
     </div>
 
     <div class="row ">
